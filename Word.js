@@ -14,13 +14,16 @@ var Word = function(word) {
     this.letters = this.createLetters(word);
 
     this.display = function () {
-        letters.forEach (function(l) {
-            l.display(); 
+        var displayString = "";
+        this.letters.forEach (function(l) {
+            displayString = displayString + (l.display()) + " "; 
         });
+        return displayString;
+
     }
 
     this.checkGuess = function (char) {
-        letters.forEach (function(letter) {
+        this.letters.forEach (function(letter) {
             letter.checkGuess(char); 
         });
     };
