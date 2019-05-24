@@ -2,10 +2,9 @@ var Letter = function(char) {
     this.char= char;
 
     this.guessed = false;
-    this.role = role;
 
     this.display = function () {
-        if (guessed) {
+        if (this.guessed) {
             return char;
         }
         else {
@@ -21,7 +20,3 @@ var Letter = function(char) {
 }
 
 module.exports = Letter;
-
-var bee = new Letter (b);
-
-console.log (b);
